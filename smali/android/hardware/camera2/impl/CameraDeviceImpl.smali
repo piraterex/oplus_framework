@@ -2179,15 +2179,6 @@
 
     .line 762
     .local v18, "input":Landroid/view/Surface;
-    iget-object v0, v9, Landroid/hardware/camera2/impl/CameraDeviceImpl;->mCameraDeviceImplExt:Landroid/hardware/camera2/impl/ICameraDeviceImplExt;
-
-    move-object/from16 v6, p6
-
-    invoke-interface {v0, v6}, Landroid/hardware/camera2/impl/ICameraDeviceImplExt;->extendParseSessionParameters(Landroid/hardware/camera2/CaptureRequest;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 766
     move-object/from16 v1, p0
 
     move-object/from16 v2, p1
@@ -2210,14 +2201,14 @@
 
     move v1, v0
 
-    .line 768
+    .line 764
     .end local v16    # "configureSuccess":Z
     .local v1, "configureSuccess":Z
     if-ne v1, v8, :cond_6
 
     if-eqz p1, :cond_6
 
-    .line 769
+    .line 765
     :try_start_3
     iget-object v0, v9, Landroid/hardware/camera2/impl/CameraDeviceImpl;->mRemoteDevice:Landroid/hardware/camera2/impl/ICameraDeviceUserWrapper;
 
@@ -2232,7 +2223,7 @@
 
     goto :goto_2
 
-    .line 771
+    .line 767
     :catch_0
     move-exception v0
 
@@ -2240,45 +2231,45 @@
 
     goto :goto_3
 
-    .line 778
+    .line 774
     :cond_6
     :goto_2
     move v0, v1
 
     goto :goto_4
 
-    .line 771
+    .line 767
     .end local v1    # "configureSuccess":Z
     .restart local v16    # "configureSuccess":Z
     :catch_1
     move-exception v0
 
-    .line 772
+    .line 768
     .local v0, "e":Landroid/hardware/camera2/CameraAccessException;
     :goto_3
     const/4 v1, 0x0
 
-    .line 773
+    .line 769
     .end local v16    # "configureSuccess":Z
     .restart local v1    # "configureSuccess":Z
     move-object/from16 v17, v0
 
-    .line 774
+    .line 770
     const/16 v18, 0x0
 
     move v0, v1
 
-    .line 781
+    .line 777
     .end local v1    # "configureSuccess":Z
     .local v0, "configureSuccess":Z
     :goto_4
     const/16 v16, 0x0
 
-    .line 782
+    .line 778
     .local v16, "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     if-eqz v14, :cond_8
 
-    .line 783
+    .line 779
     :try_start_4
     new-instance v1, Ljava/util/ArrayList;
 
@@ -2290,7 +2281,7 @@
 
     move-object v8, v1
 
-    .line 784
+    .line 780
     .local v8, "surfaces":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/Surface;>;"
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2309,7 +2300,7 @@
 
     check-cast v2, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    .line 785
+    .line 781
     .local v2, "outConfig":Landroid/hardware/camera2/params/OutputConfiguration;
     invoke-virtual {v2}, Landroid/hardware/camera2/params/OutputConfiguration;->getSurface()Landroid/view/Surface;
 
@@ -2317,17 +2308,17 @@
 
     invoke-virtual {v8, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 786
+    .line 782
     nop
 
     .end local v2    # "outConfig":Landroid/hardware/camera2/params/OutputConfiguration;
     goto :goto_5
 
-    .line 787
+    .line 783
     :cond_7
     nop
 
-    .line 788
+    .line 784
     invoke-direct/range {p0 .. p0}, Landroid/hardware/camera2/impl/CameraDeviceImpl;->getCharacteristics()Landroid/hardware/camera2/CameraCharacteristics;
 
     move-result-object v1
@@ -2342,11 +2333,11 @@
 
     move-object v7, v1
 
-    .line 789
+    .line 785
     .local v7, "config":Landroid/hardware/camera2/params/StreamConfigurationMap;
     invoke-static {v8, v15, v7}, Landroid/hardware/camera2/utils/SurfaceUtils;->checkConstrainedHighSpeedSurfaces(Ljava/util/Collection;Landroid/util/Range;Landroid/hardware/camera2/params/StreamConfigurationMap;)V
 
-    .line 791
+    .line 787
     new-instance v15, Landroid/hardware/camera2/impl/CameraConstrainedHighSpeedCaptureSessionImpl;
 
     iget v2, v9, Landroid/hardware/camera2/impl/CameraDeviceImpl;->mNextSessionId:I
@@ -2385,14 +2376,14 @@
 
     move-object v1, v15
 
-    .line 794
+    .line 790
     .end local v16    # "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     .end local v20    # "config":Landroid/hardware/camera2/params/StreamConfigurationMap;
     .end local v21    # "surfaces":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/Surface;>;"
     .local v1, "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     goto :goto_6
 
-    .line 795
+    .line 791
     .end local v1    # "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     .restart local v16    # "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     :cond_8
@@ -2422,23 +2413,23 @@
 
     move-object v1, v15
 
-    .line 800
+    .line 795
     .end local v16    # "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     .restart local v1    # "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     :goto_6
     iput-object v1, v9, Landroid/hardware/camera2/impl/CameraDeviceImpl;->mCurrentSession:Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
 
-    .line 802
+    .line 797
     if-nez v17, :cond_9
 
-    .line 806
+    .line 801
     invoke-interface {v1}, Landroid/hardware/camera2/impl/CameraCaptureSessionCore;->getDeviceStateCallback()Landroid/hardware/camera2/impl/CameraDeviceImpl$StateCallbackKK;
 
     move-result-object v2
 
     iput-object v2, v9, Landroid/hardware/camera2/impl/CameraDeviceImpl;->mSessionStateCallback:Landroid/hardware/camera2/impl/CameraDeviceImpl$StateCallbackKK;
 
-    .line 807
+    .line 802
     .end local v0    # "configureSuccess":Z
     .end local v1    # "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     .end local v14    # "isConstrainedHighSpeed":Z
@@ -2446,10 +2437,10 @@
     .end local v18    # "input":Landroid/view/Surface;
     monitor-exit v12
 
-    .line 808
+    .line 803
     return-void
 
-    .line 803
+    .line 798
     .restart local v0    # "configureSuccess":Z
     .restart local v1    # "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     .restart local v14    # "isConstrainedHighSpeed":Z
@@ -2468,7 +2459,7 @@
     .end local p6    # "sessionParams":Landroid/hardware/camera2/CaptureRequest;
     throw v17
 
-    .line 807
+    .line 802
     .end local v0    # "configureSuccess":Z
     .end local v1    # "newSession":Landroid/hardware/camera2/impl/CameraCaptureSessionCore;
     .end local v14    # "isConstrainedHighSpeed":Z
