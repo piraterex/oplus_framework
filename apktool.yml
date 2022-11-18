@@ -1,0 +1,63 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: framework.jar
+compressionType: false
+doNotCompress:
+- classes.dex
+isFrameworkApk: false
+packageInfo: null
+sdkInfo:
+  minSdkVersion: '28'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  android/accessibilityservice/AccessibilityServiceInfo_compat_config.xml: '8'
+  android/app/ActivityManager_compat_config.xml: '8'
+  android/app/Activity_compat_config.xml: '8'
+  android/app/AlarmManager_compat_config.xml: '8'
+  android/app/AppOpsManager_compat_config.xml: '8'
+  android/app/BroadcastOptions_compat_config.xml: '8'
+  android/app/PendingIntent_compat_config.xml: '8'
+  android/app/SharedPreferencesImpl_compat_config.xml: '8'
+  android/app/StatusBarManager_compat_config.xml: '8'
+  android/app/backup/BackupManager_compat_config.xml: '8'
+  android/app/backup/FullBackup_compat_config.xml: '8'
+  android/app/job/JobInfo_compat_config.xml: '8'
+  android/app/servertransaction/ActivityResultItem_compat_config.xml: '8'
+  android/content/Context_compat_config.xml: '8'
+  android/content/om/OverlayManager_compat_config.xml: '8'
+  android/content/pm/ActivityInfo_compat_config.xml: '8'
+  android/content/pm/PackageManager_compat_config.xml: '8'
+  android/content/pm/parsing/result/ParseInput.DeferredError_compat_config.xml: '8'
+  android/database/ContentObserver_compat_config.xml: '8'
+  android/hardware/SystemSensorManager_compat_config.xml: '8'
+  android/hardware/input/InputManager_compat_config.xml: '8'
+  android/inputmethodservice/InputMethodService_compat_config.xml: '8'
+  android/location/LocationManager_compat_config.xml: '8'
+  android/location/LocationRequest_compat_config.xml: '8'
+  android/media/AudioManager_compat_config.xml: '8'
+  android/media/CamcorderProfile_compat_config.xml: '8'
+  android/os/Environment_compat_config.xml: '8'
+  android/os/UserManager_compat_config.xml: '8'
+  android/permission/PermissionControllerService_compat_config.xml: '8'
+  android/permission/PermissionManager_compat_config.xml: '8'
+  android/provider/Telephony.Carriers_compat_config.xml: '8'
+  android/security/KeyStore2_compat_config.xml: '8'
+  android/telecom/TelecomManager_compat_config.xml: '8'
+  android/telephony/PreciseDataConnectionState_compat_config.xml: '8'
+  android/telephony/SmsManager_compat_config.xml: '8'
+  android/telephony/TelephonyCallback_compat_config.xml: '8'
+  android/telephony/TelephonyManager_compat_config.xml: '8'
+  android/telephony/TelephonyRegistryManager_compat_config.xml: '8'
+  android/telephony/euicc/EuiccManager_compat_config.xml: '8'
+  android/text/format/DateFormat_compat_config.xml: '8'
+  android/view/inputmethod/InlineSuggestionsRequest_compat_config.xml: '8'
+  android/view/inputmethod/InputMethodManager_compat_config.xml: '8'
+  android/webkit/WebSettings_compat_config.xml: '8'
+  android/widget/EdgeEffect_compat_config.xml: '8'
+  android/widget/TextViewOnReceiveContentListener_compat_config.xml: '8'
+  android/widget/TextView_compat_config.xml: '8'
+  android/widget/Toast_compat_config.xml: '8'
+  com/android/internal/os/Zygote_compat_config.xml: '8'
+usesFramework: null
+version: 2.6.2-22f2e6-SNAPSHOT
+versionInfo: null
